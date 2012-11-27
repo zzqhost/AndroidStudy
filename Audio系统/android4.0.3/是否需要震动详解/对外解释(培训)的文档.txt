@@ -1,0 +1,142 @@
+1. AudioManger中有三个与震动相关的函数,如下:
+     setVibrateSetting(int, int)
+     int getVibrateSetting(int)
+     public boolean shouldVibrate(int vibrateType)
+
+2. 以下描述设置中与此相关的一些概念:
+    1) 涉及到三个概念:　静音模式, 震动开关, 震动类型
+    2) 静音模式共三种:　Normal(关闭), vibrate(震动), silent(静音).
+    3) 震动开关共有三个:　Off, On, Only_silent.
+    4) 震动类型:　即可以设置震动开关的类型,　共有两个,即 Ringer, Notification.
+
+3. 目前在Setting中的设置如下:
+    1) 在Setting中可以设置三种静音模式.
+    2) 调整铃音和通知的音量时,能够自动转换静音模式. 其转换能力如下图所示:
+
+    3) 在Setting中的 "振动并响铃" 实际是是同时设置Ringer和Notification的震动开关.　并且只能设置为On(选中), Only_silent(不选中).
+
+
+4. 是否需要震动:
+    1. 手机如要震动时,需要调用函数 setVibrateSetting()来判断,然后根据結果去具体操作.
+    2. 其具体逻辑,参考下表<震动模式和静音模式关系.ods>:
+
+
+4. Google原生代码有一个Bug, 参考Ticket 4205.
+
+摘要	 0004205: Silent mode soon changes to Vibrate mode from Mute mode after viewing the Volumes and then directly touching "back" key
+说明	 Initial Condition:
+1. SIM Card: USIM
+2. Network: 3G/gprs
+3. Current alert style is ring
+ 
+Steps:
+1. Change alert style to Mute and save it
+2. Touch Volumes and see status.
+3. Touch "back" key directly.
+
+Expected Result: 
+3. Silent mode should keep Mute mode
+ 
+Actual Result:
+3. Silent mode soon changes to Vibrate mode from Mute mode after viewing the Volumes and then directly touching "back" key 
+ 
+Comment:
+1. Repeatability: 5/5
+2. date: 2012.04.16 ,time: 14:15 
+Contact Info: Gao Huikai, Tel:88850518-8110, Email: huikai_gao@borqs.com 
+
+
+
+
+
+
+
+
+(0010082)
+b607	 (开发人员) [ 私有的 ] 
+2012-04-16 20:33
+
+从settings的Log里看 每次调节音量按back会调到vol.revertVolume();并且接受到AudioManager.RINGER_MODE_CHANGED_ACTION 被设成了貌似系统设置的值，请media的team帮忙检查下什么情况会发这个Intent，为什么只有在静音的条件下按back键会被设成震动
+(0011313)
+b649	 (开发人员) [ 私有的 ] 
+2012-04-20 14:16
+
+调用函数:　setStreamVolume 引起的重设ringermoder. 请调查.
+
+04-20 06:14:28.718 D/AudioManager( 9410): setStreamVolume called. streamtype = 2, index = 0, flags = 0
+04-20 06:14:28.718 D/AudioService( 9023): setRingerMode 1, mRingerMode = 0
+04-20 06:14:28.718 D/AudioService( 9023): will be boradcast new ringer mode
+04-20 06:14:28.718 D/AudioService( 9023): boradcastringer mode mRingerMode = 1
+04-20 06:14:29.031 D/AudioManager( 9410): setStreamVolume called. streamtype = 3, index = 15, flags = 0
+04-20 06:14:29.039 D/AudioManager( 9410): setStreamVolume called. streamtype = 2, index = 0, flags = 0
+04-20 06:14:29.046 D/AudioManager( 9410): setStreamVolume called. streamtype = 5, index = 0, flags = 0
+04-20 06:14:29.054 D/AudioManager( 9410): setStreamVolume called. streamtype = 4, index = 4, flags = 0
+(0011503)
+svnadmin	 (管理员) 
+2012-04-20 16:37
+
+commit f5ac2d11a5a98bea82270421435de3bfd432789a
+Author: b649 <b649@borqs.com>
+AuthorDate: Fri Apr 20 16:19:05 2012 +0800
+Commit: b015 <b015@borqs.com>
+CommitDate: Fri Apr 20 16:37:03 2012 +0800
+
+    Zhang zhiqiang: Fix a google framework's bug which can change silent mode to vibrate mode when the ringer volume is 0.
+    
+    Change-Id: I96794bd54d6c050c64e51d1512346485bb87a699
+    borqsbt:4205
+    rootcause: we should not changed mode between in VIBRATE and SILENT.
+    Reviewed-on: http://192.168.1.250/gerrit/4173 [^]
+    Tested-by: svnadmin <svnadmin@borqs.com>
+    Reviewed-by: b015 <b015@borqs.com>
+(0012456)
+bb340	 (开发人员) [ 私有的 ] 
+2012-04-24 16:54
+
+CoreID& Name: bb340
+Date verified: 20120424.
+HW Version used for verification: T2-DVT1 
+SW Version used for verification: eng.debug.ART_M1.ARTICS.dev.120424004858.i2815/T2 
+Agree with Ticket closure: Yes.
+Close Reason: 
+the issue can't be reproduced in current version.
+
+
+
+
+
+
+
+
+
+Zhang zhiqiang: Fix a google framework's bug which can change silent mode to vibrate mode when the ringer volume is 0.
+
+Change-Id: I96794bd54d6c050c64e51d1512346485bb87a699
+borqsbt:4205
+rootcause: we should not changed mode between in VIBRATE and SILENT.
+Reviewed-on: http://192.168.1.250/gerrit/4173
+Tested-by: svnadmin <svnadmin@borqs.com>
+Reviewed-by: b015 <b015@borqs.com>
+
+diff --git a/media/java/android/media/AudioService.java b/media/java/android/media/AudioService.java
+index e86fa1f..a8dcfab 100644
+--- a/media/java/android/media/AudioService.java
++++ b/media/java/android/media/AudioService.java
+@@ -594,9 +594,12 @@ public class AudioService extends IAudioService.Stub {
+                 (STREAM_VOLUME_ALIAS[streamType] == AudioSystem.STREAM_RING))) {
+             int newRingerMode = mRingerMode;
+             if (index == 0) {
+-                newRingerMode = System.getInt(mContentResolver, System.VIBRATE_IN_SILENT, 1) == 1
+-                    ? AudioManager.RINGER_MODE_VIBRATE
+-                    : AudioManager.RINGER_MODE_SILENT;
++                // Fix, we should not changed between in VIBRATE and SILENT. 2012.4.20.    for borqs ticket 4205
++                if (mRingerMode == AudioManager.RINGER_MODE_NORMAL) {
++	                newRingerMode = System.getInt(mContentResolver, System.VIBRATE_IN_SILENT, 1) == 1
++	                    ? AudioManager.RINGER_MODE_VIBRATE
++	                    : AudioManager.RINGER_MODE_SILENT;
++                }
+                 setStreamVolumeInt(STREAM_VOLUME_ALIAS[streamType], index, false, true);
+             } else {
+                 newRingerMode = AudioManager.RINGER_MODE_NORMAL;
+
+

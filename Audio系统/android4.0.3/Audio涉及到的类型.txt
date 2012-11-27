@@ -1,0 +1,56 @@
+1. Stream Type:    (AudioSystem.java)
+    AUDIO_STREAM_DEFAULT          = -1,
+    AUDIO_STREAM_VOICE_CALL       = 0,
+    AUDIO_STREAM_SYSTEM           = 1,
+    AUDIO_STREAM_RING             = 2,
+    AUDIO_STREAM_MUSIC            = 3,
+    AUDIO_STREAM_ALARM            = 4,
+    AUDIO_STREAM_NOTIFICATION     = 5,
+    AUDIO_STREAM_BLUETOOTH_SCO    = 6,
+    AUDIO_STREAM_ENFORCED_AUDIBLE = 7, /* Sounds that cannot be muted by user and must be routed to speaker */
+    AUDIO_STREAM_DTMF             = 8,
+    AUDIO_STREAM_TTS              = 9,
+    AUDIO_STREAM_VIDEO_TELEPHONY  = 10,
+
+
+2. AudioMode:   (AudioSystem.java - setphonemode() setmode())
+    AUDIO_MODE_INVALID          = -2,
+    AUDIO_MODE_CURRENT          = -1,
+    AUDIO_MODE_NORMAL           = 0,
+    AUDIO_MODE_RINGTONE         = 1,
+    AUDIO_MODE_IN_CALL          = 2,
+    AUDIO_MODE_IN_COMMUNICATION = 3,
+    AUDIO_MODE_IN_VT_CALL       = 4,
+
+
+3. AudioSource : (MediaRecorder.java)
+    AUDIO_SOURCE_DEFAULT             = 0,
+    AUDIO_SOURCE_MIC                 = 1,
+    AUDIO_SOURCE_VOICE_UPLINK        = 2,
+    AUDIO_SOURCE_VOICE_DOWNLINK      = 3,
+    AUDIO_SOURCE_VOICE_CALL          = 4,
+    AUDIO_SOURCE_CAMCORDER           = 5,
+    AUDIO_SOURCE_VOICE_RECOGNITION   = 6,
+    AUDIO_SOURCE_VOICE_COMMUNICATION = 7,
+    AUDIO_SOURCE_VOICE_VT_CALL       = 8,
+    AUDIO_SOURCE_FMRADIO             = 9,
+
+4. output channels
+    好多.
+
+5. input channels
+    好多.
+
+6. ROUTE
+    不能直接设置，用setSpeakerphoneOn(), setBluetoothScoOn() methods instead
+
+7. device in
+    好多.
+
+8. device out
+    好多.
+
+9. Phone State
+    public static final int PHONE_STATE_OFFCALL = 0;
+    public static final int PHONE_STATE_RINGING = 1;
+    public static final int PHONE_STATE_INCALL = 2;

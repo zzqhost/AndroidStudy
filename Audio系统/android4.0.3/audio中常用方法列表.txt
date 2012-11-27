@@ -1,0 +1,10 @@
+
+
+
+public static native int setPhoneState(int state);
+public static native int setRingerMode(int mode, int mask);
+public static native int setForceUse(int usage, int config);
+public static native int getForceUse(int usage);
+
+未完待续.
+

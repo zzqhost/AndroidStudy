@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
+<XPD:HEADER>
+<XPD:SUBUNITS>
+</XPD:SUBUNITS>
+<XPD:PROFILES>
+<XPD:PROFILE>UMLStandard</XPD:PROFILE>
+</XPD:PROFILES>
+</XPD:HEADER>
+<XPD:BODY>
+<XPD:OBJ name="DocumentElement" type="UMLProject" guid="hD/IlZR1F0WI8p3sOlmugwAA">
+<XPD:ATTR name="Title" type="string">Untitled</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">5</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="0sWkSNg5nEuddEBxA02iVAAA">
+<XPD:ATTR name="Name" type="string">Scenarios</XPD:ATTR>
+<XPD:REF name="Namespace">hD/IlZR1F0WI8p3sOlmugwAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLUseCaseDiagram" guid="4CYuVbmZckyK8M/KjdSEqAAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">0sWkSNg5nEuddEBxA02iVAAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLUseCaseDiagramView" guid="Yrwl/ceP/EmZXrfjcSAtqwAA">
+<XPD:REF name="Diagram">4CYuVbmZckyK8M/KjdSEqAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="oGdMToR7xkqp5MTsY3JpFAAA">
+<XPD:ATTR name="Name" type="string">Logical View</XPD:ATTR>
+<XPD:REF name="Namespace">hD/IlZR1F0WI8p3sOlmugwAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="TYBblM0I8kuJVA+z/8vewAAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
+<XPD:REF name="DiagramOwner">oGdMToR7xkqp5MTsY3JpFAAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="l+SIfMZixEqZLTYUd7NBTwAA">
+<XPD:REF name="Diagram">TYBblM0I8kuJVA+z/8vewAAA</XPD:REF>
+<XPD:ATTR name="#OwnedViews" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedViews[0]" type="UMLClassView" guid="cBA5T9hBWE2XoL0235qLowAA">
+<XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
+<XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">200</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">160</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">345</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">121</XPD:ATTR>
+<XPD:REF name="Model">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+<XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="nYhYDIKcA0+vujgFeQNXhgAA">
+<XPD:OBJ name="NameLabel" type="LabelView" guid="hcz0guw+CUyFs0VUpVZtHQAA">
+<XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">AudioPolicyService</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="StereotypeLabel" type="LabelView" guid="1wT3NQ1GHUSwWHfAtJZLagAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="PropertyLabel" type="LabelView" guid="2zwYYghirESYXPmsWKos7AAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="AttributeCompartment" type="UMLAttributeCompartmentView" guid="NrluAxvWhkKnpoFKqo6NPgAA">
+<XPD:REF name="Model">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OperationCompartment" type="UMLOperationCompartmentView" guid="FQAjvmNuk02as8aONR42aQAA">
+<XPD:REF name="Model">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="TemplateParameterCompartment" type="UMLTemplateParameterCompartmentView" guid="b3YRb2JZLE6BVweQYXMVfQAA">
+<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+<XPD:REF name="Model">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:ATTR name="#OwnedElements" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLClass" guid="dOPBv81MDUGWvJglI0EbPgAA">
+<XPD:ATTR name="Name" type="string">AudioPolicyService</XPD:ATTR>
+<XPD:REF name="Namespace">oGdMToR7xkqp5MTsY3JpFAAA</XPD:REF>
+<XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
+<XPD:REF name="Views[0]">cBA5T9hBWE2XoL0235qLowAA</XPD:REF>
+<XPD:REF name="Views[1]">NrluAxvWhkKnpoFKqo6NPgAA</XPD:REF>
+<XPD:REF name="Views[2]">FQAjvmNuk02as8aONR42aQAA</XPD:REF>
+<XPD:REF name="Views[3]">b3YRb2JZLE6BVweQYXMVfQAA</XPD:REF>
+<XPD:ATTR name="#OwnedElements" type="integer">4</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLClass" guid="IrMm1O5q7UC+Kc2rdsaRtwAA">
+<XPD:ATTR name="Name" type="string">AudioCommandThread</XPD:ATTR>
+<XPD:REF name="Namespace">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[1]" type="UMLClass" guid="i/zA6+44P0uVpUw6LnOyHgAA">
+<XPD:ATTR name="Name" type="string">EffectDesc</XPD:ATTR>
+<XPD:REF name="Namespace">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[2]" type="UMLClass" guid="HUv9gG2nkkOQrv3CDmt9kAAA">
+<XPD:ATTR name="Name" type="string">InputSourceDesc</XPD:ATTR>
+<XPD:REF name="Namespace">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[3]" type="UMLClass" guid="LqLxlg3C8U+HmHrgiDOo+QAA">
+<XPD:ATTR name="Name" type="string">InputDesc</XPD:ATTR>
+<XPD:REF name="Namespace">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:ATTR name="#Attributes" type="integer">6</XPD:ATTR>
+<XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="3k2QJa6jyEaQwUe+ZCE0VgAA">
+<XPD:ATTR name="Name" type="string">sp &lt;AudioCommandThread&gt; mAudioCommandThread</XPD:ATTR>
+<XPD:REF name="Owner">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="6vj7xx5bC0GY/RpeoZCe9QAA">
+<XPD:ATTR name="Name" type="string">sp &lt;AudioCommandThread&gt; mTonePlaybackThread</XPD:ATTR>
+<XPD:REF name="Owner">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="HKzj2rjkhEmWJqyu3TKifQAA">
+<XPD:ATTR name="Name" type="string">struct audio_policy_device *mpAudioPolicyDev</XPD:ATTR>
+<XPD:REF name="Owner">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="AN/DW2PPBkSomU4RX3jT2AAA">
+<XPD:ATTR name="Name" type="string">struct audio_policy *mpAudioPolicy</XPD:ATTR>
+<XPD:REF name="Owner">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[4]" type="UMLAttribute" guid="LQUjYMmNlUaahVCD8j8TFQAA">
+<XPD:ATTR name="Name" type="string">KeyedVector&lt; audio_source_t, InputSourceDesc* &gt; mInputSources</XPD:ATTR>
+<XPD:REF name="Owner">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[5]" type="UMLAttribute" guid="SQ3LBsveuk2rsGYsSqDsKwAA">
+<XPD:ATTR name="Name" type="string">KeyedVector&lt; audio_io_handle_t, InputDesc* &gt; mInputs</XPD:ATTR>
+<XPD:REF name="Owner">dOPBv81MDUGWvJglI0EbPgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[2]" type="UMLModel" guid="IZM2d3isp06qa8IKNbvlAgAA">
+<XPD:ATTR name="Name" type="string">Development View</XPD:ATTR>
+<XPD:REF name="Namespace">hD/IlZR1F0WI8p3sOlmugwAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLComponentDiagram" guid="er6Uy0CEeU2uM8LZHb3BfgAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">IZM2d3isp06qa8IKNbvlAgAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLComponentDiagramView" guid="CAp77vUObE+MIHEutDSLMwAA">
+<XPD:REF name="Diagram">er6Uy0CEeU2uM8LZHb3BfgAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[3]" type="UMLModel" guid="WpV6aRruekGy0CYGyq1BuQAA">
+<XPD:ATTR name="Name" type="string">Process View</XPD:ATTR>
+<XPD:REF name="Namespace">hD/IlZR1F0WI8p3sOlmugwAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLComponentDiagram" guid="ArP/NoRYwk+zOsjeH0IKLAAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">WpV6aRruekGy0CYGyq1BuQAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLComponentDiagramView" guid="Aft0MJKBnUelYKDB4NyQAgAA">
+<XPD:REF name="Diagram">ArP/NoRYwk+zOsjeH0IKLAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[4]" type="UMLModel" guid="pz6qN1x7RUeDRlywVYyQKgAA">
+<XPD:ATTR name="Name" type="string">Physical View</XPD:ATTR>
+<XPD:REF name="Namespace">hD/IlZR1F0WI8p3sOlmugwAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLDeploymentDiagram" guid="XNI4mg7gZEyz1MOv4OtpTwAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">pz6qN1x7RUeDRlywVYyQKgAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLDeploymentDiagramView" guid="h7Ptz146wkalrR+J8dRrIwAA">
+<XPD:REF name="Diagram">XNI4mg7gZEyz1MOv4OtpTwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:BODY>
+</XPD:PROJECT>

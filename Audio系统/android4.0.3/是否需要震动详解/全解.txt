@@ -1,0 +1,30 @@
+1. 相关函数. 涉及到 Ringer mode和 vibrateSetting两种设置。
+     setVibrateSetting(int, int)
+     int getVibrateSetting(int)
+     public boolean shouldVibrate(int vibrateType)
+
+2. Ringer mode. (在Setting中叫静音模式)
+    android.media.AudioManager.RINGER_MODE_NORMAL;  2
+    android.media.AudioManager.RINGER_MODE_SILENT;  0
+    android.media.AudioManager.RINGER_MODE_VIBRATE; 1
+
+    存储在 mRingerMode 变量中。
+
+3. vibrate setting
+
+    1) 类型变量
+            两种东西需要设置vibrate setting,即铃声和通知音
+    
+        Vibrate 类型:
+            public static final int VIBRATE_TYPE_RINGER = 0;
+            public static final int VIBRATE_TYPE_NOTIFICATION = 1;
+
+        Setting 类型:
+            public static final int VIBRATE_SETTING_OFF = 0;
+            public static final int VIBRATE_SETTING_ON = 1;
+            public static final int VIBRATE_SETTING_ONLY_SILENT = 2;
+
+    2). shouldVibrate()函数调用时用到的关系表参见《震动模式和静音模式关系.ods》
+
+    3). 内部存储： mVibrateSetting:  最后两位用于表示 VIBRATE_TYPE_RINGER
+                                     次后两位表示     VIBRATE_TYPE_NOTIFICATION

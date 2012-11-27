@@ -1,0 +1,110 @@
+1. 多媒体核心
+	MediaPlayer.java
+	MediaRecorder.java
+
+	DecoderCapabilities.java    : 用来获得Android平台支持的解码器。
+	EncoderCapabilities.java    : 用来获得Android平台支持的编码器。
+
+2. Audio核心
+	AudioRecord.java
+	AudioTrack.java
+	AudioSystem.java
+	AudioFormat.java
+
+3. Audio辅助及控制
+	AsyncPlayer.java : 声音异步加载
+
+	AudioManager.java   管理音量、铃声
+	AudioService.java   声音管理服务， AudioManager中调用的是此中的实现
+
+	RingtoneManager.java
+	Ringtone.java
+	ToneGenerator.java
+
+	SoundPool.java
+
+4. Camera
+	CamcorderProfile.java
+	CameraProfile.java
+
+5. 扫描和provider
+	MediaFile.java	
+	MediaScannerClient.java
+	MediaScannerConnection.java
+	MediaScanner.java
+	MediaInserter.java
+	Metadata.java
+	TimedText.java
+	MediaMetadataRetriever.java
+
+	MiniThumbFile.java
+	ThumbnailUtils.java
+
+6. 编辑 videoeditor
+    |-- AudioTrack.java
+    |-- EffectColor.java
+    |-- Effect.java
+    |-- EffectKenBurns.java
+    |-- ExtractAudioWaveformProgressListener.java
+    |-- MediaArtistNativeHelper.java
+    |-- MediaImageItem.java
+    |-- MediaItem.java
+    |-- MediaProperties.java
+    |-- MediaVideoItem.java
+    |-- OverlayFrame.java
+    |-- Overlay.java
+    |-- TransitionAlpha.java
+    |-- TransitionCrossfade.java
+    |-- TransitionFadeBlack.java
+    |-- Transition.java
+    |-- TransitionSliding.java
+    |-- VideoEditorFactory.java
+    |-- VideoEditorImpl.java
+    |-- VideoEditor.java
+    |-- VideoEditorProfile.java
+    `-- WaveformData.java
+
+7. audiofx
+|   |-- AcousticEchoCanceler.java
+|   |-- AudioEffect.java
+|   |-- AutomaticGainControl.java
+|   |-- BassBoost.java
+|   |-- EnvironmentalReverb.java
+|   |-- Equalizer.java
+|   |-- NoiseSuppressor.java
+|   |-- package.html
+|   |-- PresetReverb.java
+|   |-- Virtualizer.java
+|   `-- Visualizer.java
+
+
+8. 其它
+	ExifInterface.java  :   用来获得Jpeg图像的Exif信息。
+	FaceDetector.java   :   人脸识别，有没有实现就不知道了,需要再研究。
+	JetPlayer.java
+	RemoteControlClient.java
+
+	AmrInputStream.java
+	ResampleInputStream.java
+
+
+
+
+说明：在frameworks/base/media/java/android/media/ 路径下总共有42个文件，其中分布为：
+      文件夹:   2个
+      aidl文件: 6个
+      html文件: 1个
+      以上有说明的文件：33个
+
+
+
+
+
+
+
+
+
+
+
+
+
